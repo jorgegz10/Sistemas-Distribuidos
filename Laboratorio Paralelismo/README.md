@@ -36,13 +36,13 @@ Facilita la compilación repetitiva del proyecto con un solo comando, evitando t
 
 ### 2. Diseño del Experimento
 
-- Se seleccionaron **seis cantidades de hilos**: `1, 4, 8, 16 y 20`.  
+- Se seleccionaron **cinco cantidades de hilos**: `1, 4, 8, 16 y 20`.  
 - Se definieron **siete tamaños de matrices diferentes**: `240, 880, 1520, 3040, 4960, 7200, 9280`.
 - Cada tamaño fue elegido como múltiplo de **80**, lo cual facilita la distribución de hilos y mejora la estructura interna de los cálculos.  
 
 
 **Nota:**  
-En las condiciones iniciales del taller se establecía el uso de **12** matrices de hasta **20.000** elementos, pero este límite se redujo posteriormente a **14.000**.  
+En las condiciones iniciales del taller se establecía el uso de **12** matrices de hasta un tamaño de **20.000**, pero este se redujo posteriormente a **14.000**.  
 Sin embargo, la ejecución del programa se realizó con el tamaño original de **20.000**.  
 
-⚠️ Algunas matrices no se procesaron debido al tiempo prolongado requerido para su ejecución, por ello, se obtuvo siete tamaños diferentes en lugar de doce. 
+Algunas matrices no se procesaron debido al tiempo prolongado requerido para su ejecución, por ello, se obtuvo siete tamaños diferentes en lugar de doce. 
