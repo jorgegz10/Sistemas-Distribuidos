@@ -4,7 +4,7 @@ El programa hace uso del algoritmo **mmClasicaOpenMP**, el cual es una implement
 
 ---
 
-## 📌 Laboratorio de Paralelismo
+## Laboratorio de Paralelismo
 
 ### 1. Documentación del Código
 
@@ -42,7 +42,8 @@ Facilita la compilación repetitiva del proyecto con un solo comando, evitando t
 - Se definieron **siete tamaños de matrices diferentes**: `240, 880, 1520, 3040, 4960, 7200, 9280`.
 - Cada tamaño fue elegido como múltiplo de **80**, lo cual facilita la distribución de hilos y mejora la estructura interna de los cálculos.  
 
-📌 **Nota:**  
+
+**Nota:**  
 En las condiciones iniciales del taller se establecía el uso de **12** matrices de hasta **20.000** elementos, pero este límite se redujo posteriormente a **14.000**.  
 Sin embargo, la ejecución del programa se realizó con el tamaño original de **20.000**.  
 
