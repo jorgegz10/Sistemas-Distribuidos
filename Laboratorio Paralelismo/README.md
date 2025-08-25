@@ -126,6 +126,9 @@ Al analizar en conjunto los resultados obtenidos para los distintos tamaños de 
 
 En conclusión, los resultados finales muestran que la eficiencia del paralelismo escala mejor a medida que aumenta el tamaño de la matriz, ya que el trabajo es lo suficientemente grande como para justificar el uso de múltiples hilos. Sin embargo, en todos los casos analizados el número óptimo de hilos se ubica alrededor de 16, punto en el que se logra la mayor reducción de tiempo sin que la sobrecarga de sincronización anule los beneficios. Esto confirma que el rendimiento en entornos paralelos no depende únicamente de más hilos, sino de encontrar el balance adecuado entre carga de trabajo, recursos disponibles y costos de coordinación.
 
+<div align="center">
+  <img width="315" height="180" alt="image" src="https://github.com/user-attachments/assets/6f7e4a1f-f377-47b6-a666-49d8cf98ef86" />
+</div>
 
 
 
