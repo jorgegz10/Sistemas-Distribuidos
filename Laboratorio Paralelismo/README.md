@@ -46,3 +46,10 @@ En las condiciones iniciales del taller se establecía el uso de **12** matrices
 Sin embargo, la ejecución del programa se realizó con el tamaño original de **20.000**.  
 
 Algunas matrices no se procesaron debido al tiempo prolongado requerido para su ejecución, por ello, se obtuvo siete tamaños diferentes en lugar de doce. 
+
+---
+
+### 3. Análisis Estadístico
+
+<img width="588" height="340" alt="image" src="https://github.com/user-attachments/assets/f823d48a-4969-4788-8ceb-63820939f1cd" />
+
