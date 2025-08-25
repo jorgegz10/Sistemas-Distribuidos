@@ -22,9 +22,9 @@ Este script automatiza la ejecución por conjuntos de **mmClasicaOpenMP**.
 
 - Su propósito es **probar diferentes tamaños de matrices y número de hilos** para evaluar el rendimiento del programa.  
 - Para cada combinación, el script ejecuta el programa **30 veces** y guarda los resultados en un archivo `.dat`.  
-- Los archivos se nombran siguiendo un formato específico, lo que permite organizar y analizar los datos obtenidos.  
+- Los archivos se nombran siguiendo un formato específico.
 
-De esta manera, se genera un conjunto de resultados que reflejan el **comportamiento del algoritmo bajo diferentes cargas computacionales**.  
+De esta manera, se genera un conjunto de resultados que reflejan el comportamiento del algoritmo bajo diferentes cargas computacionales.  
 
 ---
 
