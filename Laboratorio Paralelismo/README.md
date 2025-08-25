@@ -51,6 +51,75 @@ Algunas matrices no se procesaron debido al tiempo prolongado requerido para su 
 
 ### 3. Análisis Estadístico
 
+#### `Matriz de tamaño 240`
+
+En esta matriz, los resultados muestran de los efectos de la paralelización. Con un solo hilo, el tiempo promedio de ejecución fue ede 6769,87 ms, con una desviación estándra de 2068.74 ms, lo que refleja un tiempo muy alto y con bastantane variacion entre cada corrida. Al aumentar a 4 hilos, el timepo promedio se reduce a 1983,07 ms, con una desviacion mucho menor de 331,46, logrando un speedup (razon entre el tiempo de ejecución secuencial y el tiempo paralelo) de aproximadamente 3,4x, lo que muestra que la paralelizacion no solo acelera la ejecución, sino aporta mayor consistencia. Sin embargo, al aumentar a 8 hilos, tanto el tiempo promedio como la desviación estándar suben a 2331,43 ms y 675,97 ms respectivamente,esto expone un ejmplo de sobrecarga de sincronización, que se refiere a que aunque hay mas hilos trabajando en paralelo, el costo de mantenerlos coordinados empieza a disminuir la ganancia en rendimiento. El mejor desempeño se alacanza con 16 hilos, donde el tiempo promedio baja a 1622,77 ms con desviación de 259,36 ms, aqui el speedup es de 4,17x, lo que da a entender que representa la mayor eficiencia, ya que el trabajo es más de cuatro veces más rápido que la ejecución secuencial y ademas tiene buena estabilidad en las mediciones. Finalmente, al incrementar a 20 hilos, el tiempo vuelve a aumentar a 1877,63 ms, con desviación de 527,81 ms, lo que refuerza la idea que añadir hilos no siempre garantiza mejoras. Introducir cada vez más hilos, se traduce a mayoe sobrecarga de sincronización, ya que cda hilo requiere recursos del sistema para coordinarse e intercambiar datos. 
+
+En conclusión, para la matriz de 240, el óptimo número de hilos es 16 ya que ofrecen mejor balance entre rendimiento y estabilidad. 
+
 <div align="center">
-  <img width="415" height="205" alt="image" src="https://github.com/user-attachments/assets/f823d48a-4969-4788-8ceb-63820939f1cd" />
+  <img width="415" height="205" alt="image" src="https://github.com/user-attachments/assets/03003b62-d69d-4255-baaa-e90bea615029" />
 </div>
+
+#### `Matriz de tamaño 880`
+
+En este caso, el tiempo promedio de ejecución con 1 hilo fue de 415.925,93 ms con una desviación estandar de 9.107,27 ms, lo que refleja una ejecución consistente. Al aumentar el número de hilos se observa una mejora en el rendimiento: con 4 hilos, el tiempo promedio se reduce a 117.212,20 ms, y con 8 hilos baja aún más a 98.768,30 ms. Aunque en este último punto la desviación estándar aumenta a 12.878,55 ms, lo que muestra mayor variabilidad en las mediciones, el beneficio en rendimiento sigue siendo bueno. Con 16 hilos, el tiempo promedio baja a 85.205,00 ms, con una desviación estándar menor de 7.776,57 ms, lo que representa el mejor equilibrio entre tiempo de ejecución y estabilidad en los resultados. Finalmente, con 20 hilos se obtiene el mejor tiempo promedio 73.975,60 ms y la menor variabilidad 3.292,65 ms, lo cual aclara que, para este tamaño de matriz, la escalabilidad es muy buena y constante incluso con un número mayor de hilos.
+
+Al calcular el speedup respecto a la ejecución secuencial, se observa una aceleración de aproximadamente 3,55× con 4 hilos, 4,21× con 8 hilos, 4,88× con 16 hilos y hasta 5,62× con 20 hilos. Estos valores indican que, a diferencia de matrices más pequeñas (donde la sobrecarga de sincronización puede deteriorar el rendimiento al incrementar el número de hilos), en este tamaño de problema el paralelismo se aprovecha de manera más eficiente.
+
+<div align="center">
+  <img width="415" height="205" alt="image" src="https://github.com/user-attachments/assets/46735b52-0efc-4adc-b97e-c1bb807bbcbb" />
+</div>
+
+#### `Matriz de tamaño 1520`
+
+Con un solo hilo, el tiempo promedio fue de 2.414.296,53 ms, con una desviación estándar de 96807,51 ms. Al incrementar a 4 hilos, el tiempo cae a 749.104,33, evidenciando un buen speedup  debido a que el trabajo se reparte de manera más efectiva y se aprovechan mejor los recursos disponibles. Con 8 hilos, hay una mejora adicional hasta 574.055,70 ms, aunque se ve una menor ganancia en comparación con el salto de 1 a 4 hilos, lo puede indicar el inicio de sobrecarga de sincronización. Cuando se incrementa a 16 hilos, el tiempo se reduce aún más a 509.085,57 ms, lo que representa el mejor rendimiento, ya que en este punto la carga de trabajo se distribuye de manera muy eficiente y la sobrecarga aún esta en un rango normal. Sin embargo, al pasar a 20 hilos, hay degradación del rendimiento, ya que el tiempo promedio aumenta a 687.454,40 ms, lo que manifiesta que los costos asociados a la comunicación y sincronización entre los hilos superan los beneficios de paralelizar más allá de 16. La desviación estándar observa una disminución continua a mediada que se incrementa el numero de hilos hasta llegar a 16, despues de ellos, la desviacion crece, lo que representa pérdida de eficiencia. 
+
+En conclusión, para esta matriz el punto óptimo se alcanzó con 16 hilos, donde se obtuvo el mejor balance entre reducción de tiempo, speedup y estabilidad en la ejecución.
+
+<div align="center">
+  <img width="415" height="205" alt="image" src="https://github.com/user-attachments/assets/eb87916b-d9d8-4e60-8eb5-f2b985ab6b2f" />
+</div>
+
+#### `Matriz de tamaño 3040`
+
+Se observa un comportamiento de mejora en los tiempos promedio a medida que aumenta el número de hilos. Con 1 hilo, el promedio es de 79.748.162,83 ms, mientras que al utilizar 4 hilos este valor disminuye a 25.563.157,73 ms, lo que refleja un aprovechamiento inicial muy fuerte del paralelismo. Al incrementar a 8 hilos, el tiempo sigue reduciéndose hasta 21.492.425,47 ms, y con 16 hilos la mejora es más evidente, alcanzando los 16.471.654,57 ms, lo que que representa una disminución de casi cinco veces respecto a la ejecución secuencial. Finalmente, con 20 hilos se obtiene un promedio de 15.424.520,93 ms, lo que confirma la continua optimización, aunque la ganancia adicional frente a los 16 hilos es menor, evidenciando el punto en el que las mejoras comienzan a decaer debido a los costos de sincronización y gestión de este.
+
+En cuanto a la desviación estándar, se observa que se mantiene baja en todos los casos, lo que indica estabilidad en la ejecución. Con 1 hilo la desviación es de 1.031.554,02 ms, este disminuye con el aumento de hilos. Esto muestra que, además de reducir los tiempos, el aumento de hilos también ayuda a una mayor consistencia en los resultados corridos.
+
+<div align="center">
+  <img width="579" height="344" alt="image" src="https://github.com/user-attachments/assets/4d71aec2-5498-4fd2-9449-341d7e13d5db" />
+</div>
+
+#### `Matriz de tamaño 4960`
+
+Se observa una reducción  en el tiempo promedio a medida que aumenta el paralelismo. Con 1 hilo, el tiempo promedio de ejecución fue de 503.664.128,47 ms, mientras que con 4 hilos el tiempo cae a 134.027.263,83 ms, mostrando un beneficio de la paralelización. Al incrementar los hilos a 8, el promedio disminuye aún más hasta 110.932.713,63 ms, aunque la mejora ya no es tan grande como en el salto de 1 a 4 hilos. A partir de 16 hilos el promedio llega a 86.207.664,00 ms, y con 20 hilos baja a 84.190.239,50 ms, indicando que la ganancia empieza a estabilizarse.
+
+En cuanto a la desviación estándar, se aprecia que la variabilidad de los resultados también disminuye al usar más hilos. Con un solo hilo, la desviación estándar es alta 23.689.195,05 ms, lo que refleja no muy buena consistencia en la ejecución. Sin embargo, al aumentar el número de hilos, la dispersión de los datos se reduce: con 4 hilos baja a 1.126.476,52 ms, con 8 hilos a 5.254.963,10 ms, con 16 hilos a 2.167.974,06 ms, y con 20 hilos a 1.358.592,18 ms. Esto indica que el paralelismo no solo acelera la ejecución, sino que también aporta mayor estabilidad en los tiempos medidos.
+
+En general, los resultados muestran que la paralelización mejora notablemente la eficiencia, aunque la ganancia decrece a medida que se agregan más hilos, que puede ser por la sobrecarga de sincronización y a la saturación del hardware. 
+
+<div align="center">
+  <img width="582" height="341" alt="image" src="https://github.com/user-attachments/assets/aca89488-d2dc-45b8-a874-2e0dcc0e5c8f" />
+</div>
+
+#### `Matriz de tamaño 7200`
+
+Los resultados obtenidos muestran una mejora en el rendimiento al aumentar el número de hilos, aunque también se evidencian ciertos efectos de sincronización. Con 1 hilo, el tiempo promedio de ejecución fue de 1.685.044.463,60 ms. Al incrementar a 4 hilos, el promedio disminuye a 430.851.478,57 ms, lo que representa una aceleración de aproximadamente 3,9 veces más rápido. Posteriormente, con 8 hilos, el tiempo baja a 352.911.529,17 ns, lo que implica un speedup de aproximadamente 4,8x frente a la ejecución secuencial. Aunque hay una mejora respecto a 4 hilos, el incremento ya no es lineal, lo cual refleja el inicio de los efectos de la sobrecarga de sincronización y el reparto desigual de tareas entre los hilos. Con 16 hilos, el tiempo promedio cae a 296.445.421,97 ms, alcanzando un speedup de de 5,7x. Finalmente, al llegar a 20 hilos, se observa un aumento del tiempo a 303.519.335,93 ms, mostrando que el mucha concurrencia puede dar como resultado costos de coordinación y comunicación que superan los beneficios de dividir más el trabajo. En conclusión, el paralelismo escala de manera muy eficiente hasta los 8 hilos y de forma moderada hasta los 16, pero con 20 hilos la sincronización y la sobrecarga por la gestión de múltiples hilos empiezan a reducir el rendimiento, lo que crea un límite de escalabilidad para este tamaño de matriz.}
+
+<div align="center">
+  <img width="582" height="339" alt="image" src="https://github.com/user-attachments/assets/da538bfe-baa8-4f89-ada0-2f8cbd640fc9" />
+</div>
+
+#### `Matriz de tamaño 9280`
+
+El comportamiento mejora con el aumento de hilos hasta un punto óptimo y luego se degrada. Con 1 hilo, el tiempo promedio fue 4.329.650.200,97 ms  con una desviación estándar de 133.817.050,98 ms. Al usar 4 hilos, el promedio cae a 956.118.461,10 ms, con un speedup de 4,53×; con 8 hilos baja a 757.614.355,97 ms, su speedup de 5,71×, mostrando una ganancia adicional aunque ya menos marcada que el salto de 1 a 4. El mejor resultado aparece con 16 hilos, donde el promedio alcanza 699.935.259,90 ms y el speedup llega a 6,19×, lo que combina un buen promedio de tiempo y variabilidad, ya que posee una desviación estándar 29.762.232,63 ms. En cambio, al aumentar a 20 hilos el promedio aumenta hasta 878.622.959,47 ms, con speedup de 4,93×. En conjunto, se concluye que para este tamaño de matriz, 16 hilos ofrece el mejor equilibrio entre reducción de tiempo y estabilidad, mientras que agregar más hilos introduce más costos de coordinación que anulan la ventaja de paralelizar más.
+
+<div align="center">
+  <img width="578" height="340" alt="image" src="https://github.com/user-attachments/assets/70c642cb-d9c0-4161-a049-eeab1e5cc4be" />
+</div>
+
+
+
+
+
