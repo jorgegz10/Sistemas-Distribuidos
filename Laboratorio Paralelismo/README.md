@@ -108,7 +108,7 @@ En general, los resultados muestran que la paralelización mejora notablemente l
 Los resultados obtenidos muestran una mejora en el rendimiento al aumentar el número de hilos, aunque también se evidencian ciertos efectos de sincronización. Con 1 hilo, el tiempo promedio de ejecución fue de 1.685.044.463,60 ms. Al incrementar a 4 hilos, el promedio disminuye a 430.851.478,57 ms, lo que representa una aceleración de aproximadamente 3,9 veces más rápido. Posteriormente, con 8 hilos, el tiempo baja a 352.911.529,17 ns, lo que implica un speedup de aproximadamente 4,8x frente a la ejecución secuencial. Aunque hay una mejora respecto a 4 hilos, el incremento ya no es lineal, lo cual refleja el inicio de los efectos de la sobrecarga de sincronización y el reparto desigual de tareas entre los hilos. Con 16 hilos, el tiempo promedio cae a 296.445.421,97 ms, alcanzando un speedup de de 5,7x. Finalmente, al llegar a 20 hilos, se observa un aumento del tiempo a 303.519.335,93 ms, mostrando que el mucha concurrencia puede dar como resultado costos de coordinación y comunicación que superan los beneficios de dividir más el trabajo. En conclusión, el paralelismo escala de manera muy eficiente hasta los 8 hilos y de forma moderada hasta los 16, pero con 20 hilos la sincronización y la sobrecarga por la gestión de múltiples hilos empiezan a reducir el rendimiento, lo que crea un límite de escalabilidad para este tamaño de matriz.}
 
 <div align="center">
-  <img width="315" height="180" alt="image" src="https://github.com/user-attachments/assets/da538bfe-baa8-4f89-ada0-2f8cbd640fc9" />
+  <img width="315" height="180" alt="image" src="https://github.com/user-attachments/assets/7ab690f0-f26c-4560-af66-3cb9886c0024" />
 </div>
 
 #### `Matriz de tamaño 9280`
