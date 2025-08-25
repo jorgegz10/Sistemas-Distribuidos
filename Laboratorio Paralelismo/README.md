@@ -1,10 +1,8 @@
-# Algoritmo mmClasicaOpenMP
+# Laboratorio de Paralelismo
 
 El programa hace uso del algoritmo **mmClasicaOpenMP**, el cual es una implementación en **C** de la multiplicación clásica de matrices cuadradas, optimizada con **OpenMP** para ejecutarse en paralelo y reducir el tiempo de cómputo.
 
 ---
-
-## Laboratorio de Paralelismo
 
 ### 1. Documentación del Código
 
