@@ -51,5 +51,5 @@ Algunas matrices no se procesaron debido al tiempo prolongado requerido para su 
 
 ### 3. Análisis Estadístico
 
-<img width="588" height="340" alt="image" src="https://github.com/user-attachments/assets/f823d48a-4969-4788-8ceb-63820939f1cd" />
+<img width="488" height="240" alt="image" src="https://github.com/user-attachments/assets/f823d48a-4969-4788-8ceb-63820939f1cd" />
 
