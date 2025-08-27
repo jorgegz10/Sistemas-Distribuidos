@@ -41,7 +41,29 @@ Se decidió utilizar la máquina con dirección IP 10.195.22.245 como servidor. 
 
 Por otro lado, dos máquinas se conectaron como clientes a este servidor. Para que fuera posible, en cada una de ellas fue necesario modificar en el código `TCPClient.java` el socket que establece el canal de comunicación con el servidor, especificando tanto la dirección IP de la máquina en la que está corriendo el servidor, como el puerto en el que estaba escuchando las conexiones.
 
+- Servidor es ejecutado y empieza a escuhar: 
 <div align="center">
 <img width="700" height="50" alt="image" src="https://github.com/user-attachments/assets/44afef34-0606-44ea-82ef-31f56d3a0bb4" />
 </div>
+
+- Cliente 1 ejecuta y recibe mensaje del servidor:
+<div align="center">
+<img width="700" height="50" alt="image" src="https://github.com/user-attachments/assets/000a1094-9638-4cf7-8bad-a10dc1167886" />
+</div>
+
+- Servidor recibe los mensajes del Cliente 1:
+<div align="center">
+<img width="700" height="50" alt="image" src="https://github.com/user-attachments/assets/0855dd38-7fc6-4f69-a264-655467aae4ca" />
+</div>
+
+- Cliente 2 ejecuta y recibe mensaje del servidor:
+- <div align="center">
+<img width="700" height="50" alt="image" src="https://github.com/user-attachments/assets/d3bc03be-9e5a-4138-a3fe-8a2724d13ae8" />
+</div>
+
+- Servidor recibe los mensajes del Cliente 2:
+<div align="center">
+<img width="700" height="50" alt="image" src="https://github.com/user-attachments/assets/2ea85b60-f94f-45fe-be98-54ada63085d9" />
+</div>
+
 
