@@ -4,6 +4,7 @@ El programa implementa un modelo básico de arquitectura cliente-servidor en Jav
 La comunicación se realiza mediante sockets TCP, que permiten la transmisión confiable de datos entre procesos.
 
 ---
+### 1. Documentación del Código
 
 #### 1.1 `MultithreadedSocketServer.java`
 Crea un servidor en un puerto (en este caso, 5000, ya que se ejecutó una primera vez con el puerto 8080, se rompió la conexión y se decidió cambiar de puerto) y acepta múltiples clientes simultáneamente.  
@@ -34,13 +35,13 @@ Se conecta al servidor y permite al usuario enviar mensajes desde consola. Es el
   
 ---
 
-### 3. Diseño del Experimento
+### 2. Diseño del Experimento
 
 Se decidió utilizar la máquina con dirección IP 10.195.22.245 como servidor. Es importante señalar que en el código MultithreadedSocketServer.java el puerto fue configurado en 5000, debido a que inicialmente se realizó una prueba en el puerto 8080, pero al intentar ejecutarlo nuevamente presentó fallas, lo que motivó el cambio de puerto.
 
 Por otro lado, dos máquinas se conectaron como clientes a este servidor. Para que fuera posible, en cada una de ellas fue necesario modificar en el código `TCPClient.java` el socket que establece el canal de comunicación con el servidor, especificando tanto la dirección IP de la máquina en la que está corriendo el servidor, como el puerto en el que estaba escuchando las conexiones.
 
 <div align="center">
-<img width="1016" height="75" alt="image" src="https://github.com/user-attachments/assets/44afef34-0606-44ea-82ef-31f56d3a0bb4" />
+<img width="700" height="50" alt="image" src="https://github.com/user-attachments/assets/44afef34-0606-44ea-82ef-31f56d3a0bb4" />
 </div>
 
