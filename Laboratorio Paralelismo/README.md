@@ -97,7 +97,7 @@ Se observa un comportamiento de mejora en los tiempos promedio a medida que aume
 En cuanto a la desviación estándar, se observa que se mantiene baja en todos los casos, lo que indica estabilidad en la ejecución. Con 1 hilo la desviación es de 1.031.554,02 ms, este disminuye con el aumento de hilos. Esto muestra que, además de reducir los tiempos, el aumento de hilos también ayuda a una mayor consistencia en los resultados corridos.
 
 <div align="center">
-<img width="315" height="60" alt="image" src="https://github.com/user-attachments/assets/b6598445-25fc-4bb1-8dca-bf70c20d5e1a" />
+<img width="315" height="60" alt="image" src="https://github.com/user-attachments/assets/ae97d9e3-bb5b-47e8-8e0d-937764232d97" />
 </div>
 <div align="center">
   <img width="315" height="180" alt="image" src="https://github.com/user-attachments/assets/4d71aec2-5498-4fd2-9449-341d7e13d5db" />
