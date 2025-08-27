@@ -48,7 +48,7 @@ Por otro lado, dos máquinas se conectaron como clientes a este servidor. Para q
 
 - Cliente 1 ejecuta y recibe mensaje del servidor:
 <div align="center">
-<img width="800" height="133" alt="image" src="https://github.com/user-attachments/assets/358ff57c-2546-497a-abfa-11ba9723dca0" />
+<img width="652" height="132" alt="image" src="https://github.com/user-attachments/assets/358ff57c-2546-497a-abfa-11ba9723dca0" />
 </div>
 
 - Servidor recibe los mensajes del Cliente 1:
@@ -63,7 +63,7 @@ Por otro lado, dos máquinas se conectaron como clientes a este servidor. Para q
 
 - Servidor recibe los mensajes del Cliente 2:
 <div align="center">
-<img width="652" height="132" alt="image" src="https://github.com/user-attachments/assets/47833d18-0b14-4b0a-a5de-fa29ea9ce376" />
+<img width="850" height="60" alt="image" src="https://github.com/user-attachments/assets/5ebefb8e-c130-462e-b776-070a5eba9d45" />
 </div>
 
 
