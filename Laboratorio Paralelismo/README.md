@@ -11,7 +11,7 @@ Este programa implementa la multiplicación de matrices cuadradas haciendo uso d
 El usuario indica el tamaño de la matriz y el número de hilos a utilizar.  
 
 - Las matrices **A** y **B** se inicializan con valores aleatorios.  
-- El resultado de la multiplicación se almacena en la matriz C.  
+- El resultado de la multiplicación se almacena en la matriz **C**.  
 - Para medir el rendimiento, el programa toma el tiempo de ejecución en microsegundos antes y después de realizar la multiplicación.  
 - Si la matriz posee una dimensión menor a 9, el programa la imprime en pantalla para facilitar la validación del cálculo.  
 
