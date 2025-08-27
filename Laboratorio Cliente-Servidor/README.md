@@ -48,22 +48,22 @@ Por otro lado, dos máquinas se conectaron como clientes a este servidor. Para q
 
 - Cliente 1 ejecuta y recibe mensaje del servidor:
 <div align="center">
-<img width="700" height="50" alt="image" src="https://github.com/user-attachments/assets/000a1094-9638-4cf7-8bad-a10dc1167886" />
+<img width="800" height="133" alt="image" src="https://github.com/user-attachments/assets/358ff57c-2546-497a-abfa-11ba9723dca0" />
 </div>
 
 - Servidor recibe los mensajes del Cliente 1:
 <div align="center">
-<img width="700" height="50" alt="image" src="https://github.com/user-attachments/assets/0855dd38-7fc6-4f69-a264-655467aae4ca" />
+<img width="1016" height="75" alt="image" src="https://github.com/user-attachments/assets/a023f968-0de9-4304-bbb9-111b97316a79" />
 </div>
 
 - Cliente 2 ejecuta y recibe mensaje del servidor:
-- <div align="center">
-<img width="700" height="50" alt="image" src="https://github.com/user-attachments/assets/d3bc03be-9e5a-4138-a3fe-8a2724d13ae8" />
+<div align="center">
+<img width="652" height="132" alt="image" src="https://github.com/user-attachments/assets/bd6c0b73-34f8-4b13-927c-6f13aef04cc2" />
 </div>
 
 - Servidor recibe los mensajes del Cliente 2:
 <div align="center">
-<img width="700" height="50" alt="image" src="https://github.com/user-attachments/assets/2ea85b60-f94f-45fe-be98-54ada63085d9" />
+<img width="652" height="132" alt="image" src="https://github.com/user-attachments/assets/47833d18-0b14-4b0a-a5de-fa29ea9ce376" />
 </div>
 
 
