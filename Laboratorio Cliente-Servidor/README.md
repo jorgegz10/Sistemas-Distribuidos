@@ -63,7 +63,7 @@ Por otro lado, dos máquinas se conectaron como clientes a este servidor. Para q
 
 - Servidor recibe los mensajes del Cliente 2:
 <div align="center">
-<img width="850" height="60" alt="image" src="https://github.com/user-attachments/assets/5ebefb8e-c130-462e-b776-070a5eba9d45" />
+<img width="850" height="110" alt="image" src="https://github.com/user-attachments/assets/5ebefb8e-c130-462e-b776-070a5eba9d45" />
 </div>
 
 
