@@ -58,7 +58,7 @@ En esta matriz, los resultados muestran de los efectos de la paralelización. Co
 En conclusión, para la matriz de 240, el óptimo número de hilos es 16 ya que ofrecen mejor balance entre rendimiento y estabilidad. 
 
 <div align="center">
-<img width="803" height="149" alt="image" src="https://github.com/user-attachments/assets/23505f78-6f5c-47d6-baeb-64d3cf696563" />
+<img width="401" height="75" alt="image" src="https://github.com/user-attachments/assets/23505f78-6f5c-47d6-baeb-64d3cf696563" />
 </div>
 <div align="center">
   <img width="315" height="180" alt="image" src="https://github.com/user-attachments/assets/03003b62-d69d-4255-baaa-e90bea615029" />
