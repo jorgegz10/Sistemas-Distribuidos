@@ -4,6 +4,12 @@ Proyecto que implementa un servicio remoto de biblioteca usando Java RMI en Java
 Permite préstamos, consultas y devoluciones de libros persistidos en PostgreSQL.
 Está pensado para ejecutarse en dos computadores: uno con Servidor RMI + Base de Datos y otro(s) con Clientes.
 
+Presentado por:
+- Jorge Gomez
+- Valeria Caycedo
+- Jeisson Ruiz
+- Daniela Medina
+  
 ---
 
 ## ¿Qué hace?
@@ -98,4 +104,5 @@ export BIND_NAME="ServicioBiblioteca"
 ./scripts/ejecucion-cliente.sh  
 
 ```
+
 
