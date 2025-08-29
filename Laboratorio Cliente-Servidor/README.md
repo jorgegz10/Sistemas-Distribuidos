@@ -3,6 +3,12 @@
 El programa implementa un modelo básico de arquitectura cliente-servidor en Java, donde un servidor escucha peticiones en un puerto y un cliente se conecta a dicho servidor para intercambiar mensajes.
 La comunicación se realiza mediante sockets TCP, que permiten la transmisión confiable de datos entre procesos.
 
+Presentado por:
+Jorge Gomez
+Valeria Caycedo
+Jeisson Ruiz
+Daniela Medina 
+
 ---
 ### 1. Documentación del Código
 
