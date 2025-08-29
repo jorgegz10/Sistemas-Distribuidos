@@ -1,6 +1,6 @@
 # Library RMI — Sistema de préstamos de libros (Java RMI + PostgreSQL)
 
-Proyecto académico que implementa un servicio remoto de biblioteca usando Java RMI en Java 21.
+Proyecto que implementa un servicio remoto de biblioteca usando Java RMI en Java 21.
 Permite préstamos, consultas y devoluciones de libros persistidos en PostgreSQL.
 Está pensado para ejecutarse en dos computadores: uno con Servidor RMI + Base de Datos y otro(s) con Clientes.
 
@@ -10,10 +10,10 @@ Está pensado para ejecutarse en dos computadores: uno con Servidor RMI + Base d
 
 Objeto remoto `LibraryService` con operaciones:
 
-- **Préstamo por ISBN**: `loanByIsbn(isbn, userId)` → autoriza o rechaza; si autoriza, retorna **fecha de entrega** (hoy + 1 semana).
+- **Préstamo por ISBN**: `loanByIsbn(isbn, userId)` → autoriza o rechaza; si autoriza, retorna fecha de entrega (hoy + 1 semana).
 - **Préstamo por título**: `loanByTitle(title, userId)` → igual que por ISBN pero buscando por título.
-- **Consulta por ISBN**: `queryByIsbn(isbn)` → si existe y cuántos ejemplares **disponibles** hay.
-- **Devolución**: `returnByIsbn(isbn, userId?)` → registra devolución (si `userId` es nulo, devuelve el préstamo **más antiguo** del ISBN).
+- **Consulta por ISBN**: `queryByIsbn(isbn)` → si existe y cuántos ejemplares disponibles hay.
+- **Devolución**: `returnByIsbn(isbn, userId?)` → registra devolución (si `userId` es nulo, devuelve el préstamo más antiguo del ISBN).
 
 **Concurrencia**: el servidor usa transacciones y bloqueos `SELECT ... FOR UPDATE` para evitar carreras cuando hay múltiples clientes.
 
@@ -98,3 +98,4 @@ export BIND_NAME="ServicioBiblioteca"
 ./scripts/ejecucion-cliente.sh  
 
 ```
+
