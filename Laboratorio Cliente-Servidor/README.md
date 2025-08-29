@@ -4,10 +4,10 @@ El programa implementa un modelo básico de arquitectura cliente-servidor en Jav
 La comunicación se realiza mediante sockets TCP, que permiten la transmisión confiable de datos entre procesos.
 
 Presentado por:
-Jorge Gomez
-Valeria Caycedo
-Jeisson Ruiz
-Daniela Medina 
+- Jorge Gomez
+- Valeria Caycedo
+- Jeisson Ruiz
+- Daniela Medina 
 
 ---
 ### 1. Documentación del Código
