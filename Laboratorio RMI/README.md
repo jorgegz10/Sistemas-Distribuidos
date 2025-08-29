@@ -1,12 +1,12 @@
-# 📚 Library RMI — Sistema de préstamos de libros (Java RMI + PostgreSQL)
+# Library RMI — Sistema de préstamos de libros (Java RMI + PostgreSQL)
 
-Proyecto académico que implementa un **servicio remoto** de biblioteca usando **Java RMI** en Java 21.
-Permite **préstamos**, **consultas** y **devoluciones** de libros persistidos en **PostgreSQL**.
-Está pensado para ejecutarse en **dos computadores**: uno con **Servidor RMI + Base de Datos** y otro(s) con **Clientes**.
+Proyecto académico que implementa un servicio remoto de biblioteca usando Java RMI en Java 21.
+Permite préstamos, consultas y devoluciones de libros persistidos en PostgreSQL.
+Está pensado para ejecutarse en dos computadores: uno con Servidor RMI + Base de Datos y otro(s) con Clientes.
 
 ---
 
-## ✨ ¿Qué hace?
+## ¿Qué hace?
 
 Objeto remoto `LibraryService` con operaciones:
 
@@ -19,7 +19,7 @@ Objeto remoto `LibraryService` con operaciones:
 
 ---
 
-## 🧱 Estructura
+## Estructura
 ``` 
 ├── pom.xml
 ├── README.md
@@ -50,7 +50,7 @@ Objeto remoto `LibraryService` con operaciones:
 ``` 
 ---
 
-## 🐧 Requisitos (Linux)
+## Requisitos (Linux)
 
 - **Java 21+ (JDK)**
 - **Maven 3.8+**
@@ -58,13 +58,13 @@ Objeto remoto `LibraryService` con operaciones:
 - Abrir el puerto **TCP 1099** (RMI Registry)
 
 ---
-## 🏗️ Compilación (Linux)
+## Compilación (Linux)
 
 ```
 chmod +x scripts/ejecucion-servidor.sh scripts/ejecucion-cliente.sh
 mvn -q clean package
 ```
-## ▶️ Ejecución (Linux)
+## Ejecución (Linux)
 
 - <h2>Servidor</h2>
 
