@@ -106,7 +106,7 @@ Lógica principal del sistema, ya que contiene la definición del servicio remot
 - Abrir el puerto TCP 1099 (RMI Registry)
 
 ---
-## 5. ompilación (Linux)
+## 5. Compilación (Linux)
 
 ```
 chmod +x scripts/ejecucion-servidor.sh scripts/ejecucion-cliente.sh
@@ -146,6 +146,7 @@ export BIND_NAME="ServicioBiblioteca"
 ./scripts/ejecucion-cliente.sh  
 
 ```
+
 
 
 
