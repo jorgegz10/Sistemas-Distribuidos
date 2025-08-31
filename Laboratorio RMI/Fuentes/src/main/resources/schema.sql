@@ -1,13 +1,14 @@
--- schema.sql
+-- Crear tabla de libros
 CREATE TABLE IF NOT EXISTS books (
-                                     isbn        VARCHAR(20) PRIMARY KEY,
+    isbn        VARCHAR(20) PRIMARY KEY,
     title       TEXT NOT NULL,
     total_copies INTEGER NOT NULL CHECK (total_copies >= 0)
     );
 
+-- Crear tabla de préstamos
 CREATE TABLE IF NOT EXISTS loans (
-                                     id          BIGSERIAL PRIMARY KEY,
-                                     isbn        VARCHAR(20) NOT NULL REFERENCES books(isbn),
+    id          BIGSERIAL PRIMARY KEY,
+    isbn        VARCHAR(20) NOT NULL REFERENCES books(isbn),
     user_id     TEXT,
     loan_date   DATE NOT NULL DEFAULT CURRENT_DATE,
     due_date    DATE NOT NULL,
@@ -15,10 +16,10 @@ CREATE TABLE IF NOT EXISTS loans (
     return_date DATE
     );
 
--- Índices útiles
+-- Crear índice para agilizar búsquedas de préstamos activos
 CREATE INDEX IF NOT EXISTS idx_loans_active ON loans(isbn, returned) WHERE returned = FALSE;
 
--- Libros (se insertan primero)
+-- Insertar libros de ejemplo en la tabla 'books'
 INSERT INTO books(isbn, title, total_copies) VALUES
                                                  ('123456', 'Cien años de soledad', 4),
                                                  ('654321', 'Don Quijote de la Mancha', 5),
@@ -42,7 +43,7 @@ INSERT INTO books(isbn, title, total_copies) VALUES
                                                  ('975310', 'El coronel no tiene quien le escriba', 5)
     ON CONFLICT (isbn) DO NOTHING;
 
--- Préstamos (user_id es el número inicial de cada línea)
+-- Insertar préstamos de ejemplo (user_id es el número inicial de cada línea)
 INSERT INTO loans(isbn, user_id, loan_date, due_date, returned, return_date) VALUES
                                                                                  ('123456', '1', '2023-02-10', '2023-02-24', FALSE, NULL),
                                                                                  ('123456', '2', '2023-06-05', '2023-06-19', FALSE, NULL),
@@ -77,4 +78,5 @@ INSERT INTO loans(isbn, user_id, loan_date, due_date, returned, return_date) VAL
                                                                                  ('975310', '1', '2023-05-09', '2023-05-23', TRUE, '2023-08-14'),
                                                                                  ('975310', '3', '2023-11-22', '2023-12-06', TRUE, '2024-04-30'),
                                                                                  ('975310', '5', '2024-06-12', '2024-06-26', FALSE, NULL);
+
 
