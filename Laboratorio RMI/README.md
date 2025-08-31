@@ -59,7 +59,7 @@ Objeto remoto `LibraryService` con operaciones:
 ## Requisitos (Linux)
 
 - Java 21+ (JDK)
-- **Maven 3.8+
+- Maven 3.8+
 - PostgreSQL 13+ (o compatible)
 - Abrir el puerto TCP 1099 (RMI Registry)
 
@@ -104,6 +104,7 @@ export BIND_NAME="ServicioBiblioteca"
 ./scripts/ejecucion-cliente.sh  
 
 ```
+
 
 
 
