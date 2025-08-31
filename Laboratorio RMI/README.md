@@ -74,7 +74,7 @@ Levantar el cliente RMI y conecta al servidor de la biblioteca. Su función es t
 
 ### 3.2 src/main
 
-#### 3.2.2 Dto
+#### 3.2.1 Dto
 
 Contiene clases que sirven para transportar datos entre el cliente y el servidor en el sistema RMI. Como RMI debe enviar información a través de la red, se usan objetos serializables que organizan de manera clara y ordenada las peticiones y respuestas.
 
@@ -82,18 +82,18 @@ Contiene clases que sirven para transportar datos entre el cliente y el servidor
 - ´Respuesta.java´: Respuestas a operaciones. Informa si la operación fue exitosa y un mensaje.
 - ´RespuestaPrestamo.java´: Respuesta específica a una solicitud de préstamo. Indica si el libro fue prestado con éxito, un mensaje de estado y la fecha de vencimiento para la devolución.
 
-#### 3.2.3 Server
+#### 3.2.2 Server
 
 - ´server.java´: levanta el registro de RMI en un puerto específico y publicar en él la implementación del servicio ServicioBibliotecaImpl. Además, esta clase configura los parámetros de conexión a la base de datos (URL, usuario y contraseña) que usará el servicio.
 
-#### 3.2.4 Services
+#### 3.2.3 Services
 
 Lógica principal del sistema, ya que contiene la definición del servicio remoto y su implementación.
 
 - ´ServicioBiblioteca.java´: Interfaz remota RMI de la biblioteca.
 - ´ServicioBibliotecaImpl.java´: Implementación del servicio. Se ejecuta la lógica: conexión a la BD, validaciones, manejo de préstamos, control de copias disponibles y registro de devoluciones.
 
-#### 3.2.5 Recourses  
+#### 3.2.4 Recourses  
 
 - ´schemas.sql´: Esquema de base de datos para el sistema de biblioteca. Define las tablas necesarias para almacenar los libros y los préstamos.
 
@@ -147,6 +147,7 @@ export BIND_NAME="ServicioBiblioteca"
 ./scripts/ejecucion-cliente.sh  
 
 ```
+
 
 
 
