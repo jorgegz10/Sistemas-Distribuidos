@@ -1,4 +1,4 @@
-# Library RMI — Sistema de préstamos de libros (Java RMI + PostgreSQL)
+# Sistema de préstamos de libros (Java RMI + PostgreSQL)
 
 Proyecto que implementa un servicio remoto de biblioteca usando Java RMI en Java 21.
 Permite préstamos, consultas y devoluciones de libros persistidos en PostgreSQL.
@@ -104,5 +104,6 @@ export BIND_NAME="ServicioBiblioteca"
 ./scripts/ejecucion-cliente.sh  
 
 ```
+
 
 
