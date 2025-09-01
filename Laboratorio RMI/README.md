@@ -154,9 +154,10 @@ El taller fue una buena forma de aprender cómo aplicar la comunicación remota 
 El uso de Java RMI mostró cómo se puede crear un sistema cliente-servidor robusto, donde el cliente no tiene que preocuparse por los detalles internos del servidor. Esto refleja la idea de transparencia de localización, que es una característica principal de este tipo de arquitecturas.
 Aunque RMI puede manejar múltiples clientes, no está diseñado para entornos de alta concurrencia a gran escala. Por lo tanto, se concluye que, para situaciones más complejas, sería necesario considerar arquitecturas basadas en microservicios, colas de mensajes o frameworks de comunicación distribuida más modernos.
 
-Hay que resaltar que el uso de objetos serializables es muy importante para asegurar un flujo adecuado de datos en la red, evitando inconsistencias de comunicación. En general, la separación entre el cliente, el servidor y las interfaces remotas fue fundamental para lograr la modularidad del sistema, ya que esto no solo facilita su escalabilidad, sino que también permite agregar nuevos clientes o crear nuevas funcionalidades del servidor sin tener que modificar mucho la lógica del sistema. Así mismo, se evidenció que las interfaces son de gran ayuda para separar la lógica de negocio de la lógica de comunicación.
+Hay que resaltar que el uso de objetos serializables es muy importante para asegurar un flujo adecuado de datos en la red, evitando inconsistencias de comunicación. Por otro lado, se evidenció que las interfaces son de gran ayuda para separar la lógica de negocio de la lógica de comunicación. En general, la separación entre el cliente, el servidor y las interfaces remotas fue fundamental para lograr la modularidad del sistema, ya que esto no solo facilita su escalabilidad, sino que también permite agregar nuevos clientes o crear nuevas funcionalidades del servidor sin tener que modificar mucho la lógica del sistema. 
 
 Otro aspecto clave fue la necesidad de implementar un esquema de control de concurrencia y sincronización en el servidor para manejar varias solicitudes concurrentes. Esto permitió observar la importancia de evitar situaciones de carrera y controlar la integridad de los datos, sobre todo en operaciones de préstamo y devolución. 
+
 
 
 
