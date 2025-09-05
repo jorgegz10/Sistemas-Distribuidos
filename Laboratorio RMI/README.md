@@ -61,10 +61,10 @@ Objeto remoto `LibraryService` con operaciones:
 
 Puente entre el código y el usuario, automatizando la configuración y arranque de los componentes para ejecutar el sistema. Simplifica la interacción con el proyecto, permitiendo levantar de forma fácil tanto el servisor como el cliente con una configuración adecuada. 
 
--  `ejecución-servidor.sh`
+-  `ejecución-servidor.sh`:
 Se encarga de iniciar el servidor RMI que ofrece el servicio de la biblioteca. Su propósito es configurar automáticamente la IP, el puerto, el nombre con el que se publicará el servicio y las credenciales de la BD PostgreSQL. Así, el servidor queda listo para recibir peticiones de los clientes.
 
-- `ejecución-cliente.sh`
+- `ejecución-cliente.sh`:
 Levantar el cliente RMI y conecta al servidor de la biblioteca. Su función es tomar los parámetros necesarios como la IP del servidor, el puerto de comunicación y el nombre del servicio registrado, para que el cliente pueda interactuar directamente con el servidor. Permite que el cliente invoque operaciones de préstamos, consultas y devoluciones.
 
 ### 3.2 Src/main > java/com/puj
@@ -160,6 +160,7 @@ Aunque RMI puede manejar múltiples clientes, no está diseñado para entornos d
 Hay que resaltar que el uso de objetos serializables es muy importante para asegurar un flujo adecuado de datos en la red, evitando inconsistencias de comunicación. Por otro lado, se evidenció que las interfaces son de gran ayuda para separar la lógica de negocio de la lógica de comunicación. En general, la separación entre el cliente, el servidor y las interfaces remotas fue fundamental para lograr la modularidad del sistema, ya que esto no solo facilita su escalabilidad, sino que también permite agregar nuevos clientes o crear nuevas funcionalidades del servidor sin tener que modificar mucho la lógica del sistema. 
 
 Otro aspecto clave fue la necesidad de implementar un esquema de control de concurrencia y sincronización en el servidor para manejar varias solicitudes concurrentes. Esto permitió observar la importancia de evitar situaciones de carrera y controlar la integridad de los datos, sobre todo en operaciones de préstamo y devolución. 
+
 
 
 
